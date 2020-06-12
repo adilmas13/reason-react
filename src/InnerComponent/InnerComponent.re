@@ -1,5 +1,7 @@
 [@react.component]
 let make = (~children) => {
+
+  Js.log(children);
 open ReasonReact;
 
 let (count, setCount) = React.useState(() => 0);
@@ -21,21 +23,21 @@ let conditionalUpdate = (_, isIncrement:bool) => {
 
 // gets called when any variable state is updated and also when the component is destroyed
 React.useEffect(() =>{
-  Js.log("EFFECT one");
+  Js.log("Called");
   Some(() => Js.log("Something"));
 });
 
 // gets called only when count state is updated
 // something get called in destroy of component and also on each state change of count
 React.useEffect1(() =>{
-  Js.log("EFFECT one");
+  Js.log("Count EFFECT");
   Some(() => Js.log("Something"));
 }, [|count|]);
 
 // gets called only the first time when the component is rendered
 // but something will not get called the first time
 React.useEffect0(() => {
-  Js.log("EFFECT one");
+  Js.log("Called only once");
   // use this for cleanup
   Some(() => Js.log("Something"));
 });

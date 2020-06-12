@@ -5,6 +5,7 @@ var React = require("react");
 
 function InnerComponent(Props) {
   var children = Props.children;
+  console.log(children);
   var match = React.useState((function () {
           return 0;
         }));
@@ -25,21 +26,21 @@ function InnerComponent(Props) {
                 }));
   };
   React.useEffect((function () {
-          console.log("EFFECT one");
+          console.log("Called");
           return (function (param) {
                     console.log("Something");
                     
                   });
         }));
   React.useEffect((function () {
-          console.log("EFFECT one");
+          console.log("Count EFFECT");
           return (function (param) {
                     console.log("Something");
                     
                   });
         }), [count]);
   React.useEffect((function () {
-          console.log("EFFECT one");
+          console.log("Called only once");
           return (function (param) {
                     console.log("Something");
                     
