@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require("react");
+var ReactDOMStyle = require("reason-react/src/ReactDOMStyle.bs.js");
 
 function StyledComponent(Props) {
   var singleStyleObject = {
@@ -13,6 +14,10 @@ function StyledComponent(Props) {
   var textStyle = {
     fontSize: "40px"
   };
+  var test = {
+    color: "#ff00ff"
+  };
+  ReactDOMStyle.unsafeAddProp(test, "something", "10px");
   return React.createElement(React.Fragment, undefined, React.createElement("h3", undefined, "Styled Component"), React.createElement("div", {
                   style: singleStyleObject
                 }, "Single Styled object"), React.createElement("div", {
