@@ -1,15 +1,20 @@
 open ReasonReact;
+open ReactDOMRe.Style;
 
 type routing = |Home|Users|Help;
 
 [@react.component]
 let make = () => {
 
-  let parentWrapperHeight = ReactDOMRe.Style.make(~height="100vh", ~display="flex",~flexDirection="column", ());
+  // make function is part of ReactDOMRe.Style module which is opened on top
+  let parentWrapperHeight = make(~height="100vh", ~display="flex",~flexDirection="column", ());
 
-  let bodyStyle =  ReactDOMRe.Style.make(~flex="1", ());
+  // make function is part of ReactDOMRe.Style module which is opened on top
+  let bodyStyle = make(~flex="1", ());
 
+  // gets the route url
   let url = ReasonReactRouter.useUrl();
+
   Js.log(url);
 
   let body = () => {
@@ -28,7 +33,7 @@ let make = () => {
   <div style=(parentWrapperHeight)>
     <Header/>
     {body()}
- <Footer/>
+  <Footer/>
   </div>
 
 
