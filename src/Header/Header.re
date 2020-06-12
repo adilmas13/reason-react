@@ -1,4 +1,3 @@
-open ReasonReact;
 open ReactDOMRe.Style;
 type navigation = {title:string, href:string};
 
@@ -11,7 +10,12 @@ let make = () => {
     {
         title:"Users",
         href : "/users"
-    }|]
+    },
+     {
+        title:"Refs In React",
+        href : "/refs"
+    }
+    |]
 
 
     let headerStyle = make(~height ="70px", ~width="100vw", ~backgroundColor="#2e86c1", ~display="flex", ());

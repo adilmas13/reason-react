@@ -5,6 +5,7 @@ var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.bs.js");
 var Home$ReasonReactExamples = require("./Home/Home.bs.js");
 var Footer$ReasonReactExamples = require("./Footer/Footer.bs.js");
 var Header$ReasonReactExamples = require("./Header/Header.bs.js");
+var RefsComponent$ReasonReactExamples = require("./Refs/RefsComponent.bs.js");
 
 function App(Props) {
   var parentWrapperHeight = {
@@ -29,17 +30,36 @@ function App(Props) {
   var body = function (param) {
     var match = url.path;
     var tmp;
-    tmp = match ? (
-        match[0] === "users" ? (
-            match[1] ? React.createElement(Home$ReasonReactExamples.make, {
-                    name: "Adil"
-                  }) : React.createElement("div", undefined, "Users")
-          ) : React.createElement(Home$ReasonReactExamples.make, {
-                name: "Adil"
-              })
-      ) : React.createElement(Home$ReasonReactExamples.make, {
+    var exit = 0;
+    if (match) {
+      switch (match[0]) {
+        case "refs" :
+            if (match[1]) {
+              exit = 1;
+            } else {
+              tmp = React.createElement(RefsComponent$ReasonReactExamples.make, { });
+            }
+            break;
+        case "users" :
+            if (match[1]) {
+              exit = 1;
+            } else {
+              tmp = React.createElement("div", undefined, "Users");
+            }
+            break;
+        default:
+          exit = 1;
+      }
+    } else {
+      tmp = React.createElement(Home$ReasonReactExamples.make, {
             name: "welcome"
           });
+    }
+    if (exit === 1) {
+      tmp = React.createElement(Home$ReasonReactExamples.make, {
+            name: "Adil"
+          });
+    }
     return React.createElement("div", {
                 style: bodyStyle
               }, tmp);

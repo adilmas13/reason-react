@@ -29,6 +29,7 @@ let make = () => {
          switch (url.path) {
         | [] => <Home name="welcome"/>
         | ["users"] => <div>{string("Users")}</div>
+        | ["refs"] => <RefsComponent/>
         |_ => <Home name="Adil"/>
    };
        }
