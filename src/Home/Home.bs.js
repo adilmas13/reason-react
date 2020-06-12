@@ -32,7 +32,7 @@ function Home(Props) {
                         key: "1"
                       }, "This is a child1 component"), React.createElement("div", {
                         key: "2"
-                      }, "This is a child2 component")) : React.createElement("div", undefined, "OK"), React.createElement(StyledComponent$ReasonReactExamples.make, { }));
+                      }, "This is a child2 component")) : null, React.createElement(StyledComponent$ReasonReactExamples.make, { }));
 }
 
 var make = Home;

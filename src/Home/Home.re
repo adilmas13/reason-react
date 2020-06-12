@@ -29,7 +29,7 @@ let make = (~name) => {
            <div key="1"> {string("This is a child1 component")} </div>
            <div key="2"> {string("This is a child2 component")} </div>
          </InnerComponent>
-       : <div> {string("OK")} </div>}
+       : ReasonReact.null}
     <StyledComponent />
   </div>;
 }
