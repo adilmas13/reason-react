@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require("react");
-var InnerComponent$ReasonReactExamples = require("./InnerComponent.bs.js");
+var InnerComponent$ReasonReactExamples = require("./InnerComponent/InnerComponent.bs.js");
 
 function App(Props) {
   var name = Props.name;
