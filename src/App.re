@@ -3,37 +3,21 @@ open ReasonReact;
 [@react.component]
 let make = (~name) => {
 
+  let (visibile, setVisible) = React.useState(() => true);
 
-let (count, setCount) = React.useState(() => 0);
 
-let (anotherCount, setAnotherCount) = React.useState(() => 0);
-
-let incrementCounter = (_) => setCount(prevCount => prevCount + 1);
-
-let decrementCounter = (_) => setAnotherCount(prevCount => prevCount + 1);
-
-let test = (_, isIncrement:bool) => {
-  if(count >= 10){
-    ();
-  }else{
-  setCount(prevCount => isIncrement ? prevCount + 1 : prevCount - 1)
-  }
-}
-
-React.useEffect2(() =>{
-  Js.log("EFFECT one");
-  Some(() => Js.log("Something"));
-}, (count, anotherCount));
-
+  let timeToDestroy = (_) => {
+    Js.log("Calling destroy .....");
+    setVisible((visibility) => !visibility);
+  };
 
   <div>
-    <button onClick=incrementCounter> {string("Increament")} </button>
-     <button onClick=decrementCounter> {string("Decrement")} </button>
-     <button>{string("Clicked")}</button>
-    <InnerComponent>
+<button onClick=timeToDestroy>{string("DESTROY")}</button>
+    {
+      visibile ? <InnerComponent>
       <div> {string("This is a child component")} </div>
-      <div>{string("Count => " ++ string_of_int(count) )}</div>
-            <div>{string("Another Count => " ++ string_of_int(anotherCount) )}</div>
-    </InnerComponent>
+    </InnerComponent> : <div>{string("OK")}</div>
+    }
+    <div>{visibile ? string("isVisible") : string("Gone")}</div>
   </div>
 };
