@@ -16,7 +16,16 @@ function App(Props) {
     flex: "1"
   };
   var url = ReasonReactRouter.useUrl(undefined, undefined);
-  console.log(url);
+  React.useEffect((function () {
+          var token = ReasonReactRouter.watchUrl((function (url) {
+                  console.log("Listening ...");
+                  console.log(url);
+                  
+                }));
+          return (function (param) {
+                    return ReasonReactRouter.unwatchUrl(token);
+                  });
+        }), ([]));
   var body = function (param) {
     var match = url.path;
     var tmp;
