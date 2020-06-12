@@ -14,6 +14,10 @@ let make = () => {
      {
         title:"Refs In React",
         href : "/refs"
+    },
+    {
+        title:"Events",
+        href : "/events"
     }
     |]
 

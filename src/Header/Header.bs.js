@@ -17,6 +17,10 @@ function Header(Props) {
     {
       title: "Refs In React",
       href: "/refs"
+    },
+    {
+      title: "Events",
+      href: "/events"
     }
   ];
   var headerStyle = {

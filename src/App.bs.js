@@ -6,6 +6,7 @@ var Home$ReasonReactExamples = require("./Home/Home.bs.js");
 var Footer$ReasonReactExamples = require("./Footer/Footer.bs.js");
 var Header$ReasonReactExamples = require("./Header/Header.bs.js");
 var RefsComponent$ReasonReactExamples = require("./Refs/RefsComponent.bs.js");
+var EventComponent$ReasonReactExamples = require("./Event/EventComponent.bs.js");
 
 function App(Props) {
   var parentWrapperHeight = {
@@ -33,6 +34,13 @@ function App(Props) {
     var exit = 0;
     if (match) {
       switch (match[0]) {
+        case "events" :
+            if (match[1]) {
+              exit = 1;
+            } else {
+              tmp = React.createElement(EventComponent$ReasonReactExamples.make, { });
+            }
+            break;
         case "refs" :
             if (match[1]) {
               exit = 1;

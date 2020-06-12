@@ -30,6 +30,7 @@ let make = () => {
         | [] => <Home name="welcome"/>
         | ["users"] => <div>{string("Users")}</div>
         | ["refs"] => <RefsComponent/>
+         | ["events"] => <EventComponent/>
         |_ => <Home name="Adil"/>
    };
        }
