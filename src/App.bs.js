@@ -3,6 +3,7 @@
 var React = require("react");
 var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.bs.js");
 var Home$ReasonReactExamples = require("./Home/Home.bs.js");
+var ReasonReactErrorBoundary = require("reason-react/src/ReasonReactErrorBoundary.bs.js");
 var Footer$ReasonReactExamples = require("./Footer/Footer.bs.js");
 var Header$ReasonReactExamples = require("./Header/Header.bs.js");
 var RefsComponent$ReasonReactExamples = require("./Refs/RefsComponent.bs.js");
@@ -72,9 +73,14 @@ function App(Props) {
                 style: bodyStyle
               }, tmp);
   };
-  return React.createElement("div", {
-              style: parentWrapperHeight
-            }, React.createElement(Header$ReasonReactExamples.make, { }), body(undefined), React.createElement(Footer$ReasonReactExamples.make, { }));
+  return React.createElement(ReasonReactErrorBoundary.make, {
+              children: React.createElement("div", {
+                    style: parentWrapperHeight
+                  }, React.createElement(Header$ReasonReactExamples.make, { }), body(undefined), React.createElement(Footer$ReasonReactExamples.make, { })),
+              fallback: (function (param) {
+                  return "An error occured";
+                })
+            });
 }
 
 var make = App;

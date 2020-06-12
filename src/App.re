@@ -38,11 +38,14 @@ let make = () => {
   };
 
   //  render
-  <div style=(parentWrapperHeight)>
+  <ReasonReactErrorBoundary fallback={_ => "An error occured"->React.string}>
+    <div style=(parentWrapperHeight)>
     <Header/>
     {body()}
   <Footer/>
   </div>
+  </ReasonReactErrorBoundary>
+
 
 
   
