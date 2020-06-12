@@ -7,6 +7,7 @@ let make = () => {
      let textStyle = ReactDOMRe.Style.make(~fontSize = "40px", ());
 
  <>
+   <h3>{string("Styled Component")}</h3>
   <div style=(singleStyleObject)>
         {string("Single Styled object")}
     </div>

@@ -15,12 +15,12 @@ function InnerComponent(Props) {
           return 0;
         }));
   var setAnotherCount = match$1[1];
-  var incrementCounter = function (param) {
+  var incrementCounter1 = function (param) {
     return Curry._1(setCount, (function (prevCount) {
                   return prevCount + 1 | 0;
                 }));
   };
-  var decrementCounter = function (param) {
+  var incrementCounter2 = function (param) {
     return Curry._1(setAnotherCount, (function (prevCount) {
                   return prevCount + 1 | 0;
                 }));
@@ -46,11 +46,11 @@ function InnerComponent(Props) {
                     
                   });
         }), ([]));
-  return React.createElement(React.Fragment, undefined, React.createElement("button", {
-                  onClick: incrementCounter
-                }, "Increament"), React.createElement("button", {
-                  onClick: decrementCounter
-                }, "Decrement"), React.createElement("button", undefined, "Clicked"), React.createElement("div", undefined, "Count => " + String(count)), React.createElement("div", undefined, "Another Count => " + String(match$1[0])), React.createElement("div", undefined, "Hello world", children));
+  return React.createElement(React.Fragment, undefined, React.createElement("h3", undefined, "Inner Component"), React.createElement("button", {
+                  onClick: incrementCounter1
+                }, "Update Counter 1"), React.createElement("button", {
+                  onClick: incrementCounter2
+                }, "Update Counter 2  "), React.createElement("div", undefined, "Count => " + String(count)), React.createElement("div", undefined, "Another Count => " + String(match$1[0])), React.createElement("div", undefined, "Hello world", children));
 }
 
 var make = InnerComponent;

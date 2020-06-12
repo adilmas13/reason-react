@@ -8,9 +8,9 @@ let (count, setCount) = React.useState(() => 0);
 
 let (anotherCount, setAnotherCount) = React.useState(() => 0);
 
-let incrementCounter = (_) => setCount(prevCount => prevCount + 1);
+let incrementCounter1 = (_) => setCount(prevCount => prevCount + 1);
 
-let decrementCounter = (_) => setAnotherCount(prevCount => prevCount + 1);
+let incrementCounter2= (_) => setAnotherCount(prevCount => prevCount + 1);
 
 // using the same function to update the state conditionally
 let conditionalUpdate = (_, isIncrement:bool) => {
@@ -43,9 +43,9 @@ React.useEffect0(() => {
 });
   
  <>
- <button onClick=incrementCounter> {string("Increament")} </button>
-     <button onClick=decrementCounter> {string("Decrement")} </button>
-     <button>{string("Clicked")}</button>
+   <h3>{string("Inner Component")}</h3>
+ <button onClick=incrementCounter1> {string("Update Counter 1")} </button>
+     <button onClick=incrementCounter2> {string("Update Counter 2  ")} </button>
  <div>{string("Count => " ++ string_of_int(count) )}</div>
   <div>{string("Another Count => " ++ string_of_int(anotherCount) )}</div>
 

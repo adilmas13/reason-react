@@ -11,15 +11,17 @@ let make = (~name) => {
   };
 
   <div>
-<button onClick=timeToDestroy>{string("DESTROY")}</button>
-<div>{string("Welcome " ++ name)}</div>
+  <h3>{string("App Component")}</h3>
+  <div>{string("Welcome " ++ name)}</div>
+   <div>{visibile ? string("Inner component isVisible") : string("Inner component is Gone")}</div>
+<button onClick=timeToDestroy>{string("DESTROY Inner Component")}</button>
     {
       visibile ? <InnerComponent>
       <div key="1"> {string("This is a child1 component")} </div>
       <div key="2"> {string("This is a child2 component")} </div>
     </InnerComponent> : <div>{string("OK")}</div>
     }
-    <div>{visibile ? string("isVisible") : string("Gone")}</div>
+   
 
     <StyledComponent/>
   </div>

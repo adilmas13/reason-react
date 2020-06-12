@@ -18,15 +18,15 @@ function App(Props) {
                   return !visibility;
                 }));
   };
-  return React.createElement("div", undefined, React.createElement("button", {
+  return React.createElement("div", undefined, React.createElement("h3", undefined, "App Component"), React.createElement("div", undefined, "Welcome " + name), React.createElement("div", undefined, visibile ? "Inner component isVisible" : "Inner component is Gone"), React.createElement("button", {
                   onClick: timeToDestroy
-                }, "DESTROY"), React.createElement("div", undefined, "Welcome " + name), visibile ? React.createElement(InnerComponent$ReasonReactExamples.make, {
+                }, "DESTROY Inner Component"), visibile ? React.createElement(InnerComponent$ReasonReactExamples.make, {
                     children: null
                   }, React.createElement("div", {
                         key: "1"
                       }, "This is a child1 component"), React.createElement("div", {
                         key: "2"
-                      }, "This is a child2 component")) : React.createElement("div", undefined, "OK"), React.createElement("div", undefined, visibile ? "isVisible" : "Gone"), React.createElement(StyledComponent$ReasonReactExamples.make, { }));
+                      }, "This is a child2 component")) : React.createElement("div", undefined, "OK"), React.createElement(StyledComponent$ReasonReactExamples.make, { }));
 }
 
 var make = App;

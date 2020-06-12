@@ -13,7 +13,7 @@ function StyledComponent(Props) {
   var textStyle = {
     fontSize: "40px"
   };
-  return React.createElement(React.Fragment, undefined, React.createElement("div", {
+  return React.createElement(React.Fragment, undefined, React.createElement("h3", undefined, "Styled Component"), React.createElement("div", {
                   style: singleStyleObject
                 }, "Single Styled object"), React.createElement("div", {
                   style: Object.assign(({}), textStyle, style)
