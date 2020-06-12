@@ -22,8 +22,7 @@ let make = () => {
 
     <div style=(headerStyle)>
      {
-      links
-      ->Belt.Array.map(item =>
+      Belt.Array.map(links, item =>
           <div 
           onClick=redirect(_,item)
           style=(navItemStyle) key={item.title}> {React.string(item.title)} </div>
