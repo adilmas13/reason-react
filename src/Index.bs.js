@@ -2,9 +2,9 @@
 
 var React = require("react");
 var ReactDOMRe = require("reason-react/src/legacy/ReactDOMRe.bs.js");
-var Greeting$ReasonReactExamples = require("./Greeting.bs.js");
+var App$ReasonReactExamples = require("./App.bs.js");
 
-ReactDOMRe.renderToElementWithId(React.createElement(Greeting$ReasonReactExamples.make, {
+ReactDOMRe.renderToElementWithId(React.createElement(App$ReasonReactExamples.make, {
           name: "John"
         }), "root");
 
