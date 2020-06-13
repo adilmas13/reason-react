@@ -12,6 +12,8 @@ let make = () => {
   // make function is part of ReactDOMRe.Style module which is opened on top
   let bodyStyle = make(~flex="1", ~padding="20px",~boxSizing="border-box",());
 
+  let bodyWrapperStyle= make(~display="flex", ~flexDirection="column",~flex="1",());
+
   // gets the route url
   let url = ReasonReactRouter.useUrl();
 
@@ -28,9 +30,9 @@ let make = () => {
        {
          switch (url.path) {
         | [] => <Home name="welcome"/>
-        | ["users"] => <div>{string("Users")}</div>
+        | ["styling"] => <StyledComponent/>
         | ["refs"] => <RefsComponent/>
-         | ["events"] => <EventComponent/>
+        | ["events"] => <EventComponent/>
         |_ => <Home name="Adil"/>
    };
        }
@@ -39,14 +41,17 @@ let make = () => {
 
   //  render
   <ReasonReactErrorBoundary fallback={_ => "An error occured"->React.string}>
+
     <div style=(parentStyle)>
 
-<NavigationPanel/>
-    {body()}
-  </div>
+    <NavigationPanel/>
+        <div style=bodyWrapperStyle>
+          <Header/>
+          {body()}
+        </div>
+    </div>
+  
+  
   </ReasonReactErrorBoundary>
 
-
-
-  
 };

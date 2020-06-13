@@ -10,12 +10,12 @@ let make = () => {
         href : "/"
     },
     {
-         id:"users",
-        title:"Users",
-        href : "/users"
+         id:"stying",
+        title:"Styling CSS",
+        href : "/styling"
     },
      {
-          id:"refs",
+        id:"refs",
         title:"Refs In React",
         href : "/refs"
     },

@@ -1,43 +1,30 @@
 open ReactDOMRe.Style;
+open React;
+open ReasonReact;
 type navigation = {title:string, href:string};
 
 [@react.component]
 let make = () => {
-    let links = [|{
-        title:"Home",
-        href : "/"
-    },
-    {
-        title:"Users",
-        href : "/users"
-    },
-     {
-        title:"Refs In React",
-        href : "/refs"
-    },
-    {
-        title:"Events",
-        href : "/events"
-    }
-    |]
+    let (title,setTitle)=useState(() => "Home")
 
+    let updateTitle = (newTitle:string) => setTitle(_ => newTitle);
 
-    let headerStyle = make(~height ="70px", ~width="100vw", ~backgroundColor="#2e86c1", ~display="flex", ());
+    useEffect0(() => {
+       let token = ReasonReactRouter.watchUrl(url => {
+            switch(url.path){
+                 | [] => updateTitle("Home")
+        | ["users"] => updateTitle("Users")
+        | ["refs"] => updateTitle("RefsComponent")
+        | ["events"] => updateTitle("EventComponent")
+        |_ => updateTitle("Home")
+            }
+        });
+        Some(()=> ReasonReactRouter.unwatchUrl(token));
+    });
 
-    let navItemStyle = make(~color="#fff", ~fontWeight="500", ~cursor= "pointer", ~height = "100%", ~width="100px", ~display="flex", ~alignItems =  "center", ~justifyContent="center", ());
-
-    let redirect = (_,navigation: navigation) => ReasonReactRouter.push(navigation.href);
+    let headerStyle = make(~height ="70px", ~fontSize="20px",~fontWeight="500", ~backgroundColor="#48a9dc", ~display="flex", ~alignItems="center", ~paddingLeft="20px", ~color="#fff", ());
 
     <div style=(headerStyle)>
-     {
-      Belt.Array.map(links, item =>
-          <div 
-          onClick=redirect(_,item)
-          style=(navItemStyle) key={item.title}> {React.string(item.title)} </div>
-        )
-      /* Since everything is typed, the arrays need to be, too! */
-      ->React.array
-    }
-
+        {string("Component Name : " ++ title)}
     </div>
 }
