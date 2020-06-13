@@ -49,9 +49,13 @@ let make = () => {
   });
 
   <div>
-    <h4> {string("Demo shows which effect is called as a result of a change in a state/render")} </h4>
-    <h4> {string("All effects are called atleast once due to the initial render of the component")} </h4>
-    <h4> {string("Check code for different implementations of effects")} </h4>
+  <ul>
+  <li> {string("Demo shows which effect is called as a result of a change in a state/render")} </li>
+    <li> {string("All effects are called atleast once due to the initial render of the component")} </li>
+    <li> {string("Check code for different implementations of effects")} </li>
+  </ul>
+    
+    <br/>
     <button onClick=incrementCounter1> {string("Update Counter 1")} </button>
     <button onClick=incrementCounter2>
       {string("Update Counter 2  ")}

@@ -19,7 +19,7 @@ let make = () => {
        <div style=(bodyStyle)>
        {
          switch (url.path) {
-        | [] => <Home name="welcome"/>
+        | [] => <Introduction/>
         | ["simple-component"] => <SimpleComponent/>
         | ["simple-component-with-props"] => <SimpleComponentWithProps/>
         | ["component-with-children"] => <ComponentWithChildren/>
@@ -28,7 +28,7 @@ let make = () => {
         | ["styling"] => <StyledComponent/>
         | ["refs"] => <RefsComponent/>
         | ["events"] => <EventComponent/>
-        |_ => <Home name="Adil"/>
+        |_ => <Introduction/>
    };
        }
        </div>

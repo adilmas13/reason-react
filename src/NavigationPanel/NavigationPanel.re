@@ -5,8 +5,8 @@ type navigation = {id:string,title:string, href:string};
 let make = () => {
 
         let links = [|{
-        id:"home",
-        title:"Home",
+        id:"introduction",
+        title:"Introduction",
         href : "/"
     },
     {
@@ -51,7 +51,7 @@ let make = () => {
     }
     |]
 
-    let (selectedLink, setSelectedLink) = React.useState(() => "home");
+    let (selectedLink, setSelectedLink) = React.useState(() => "introduction");
     
     let parentStyle = make(~display="flex",~flexDirection="column", ~width="300px", ~backgroundColor="#db4d3f",());
     let linkWrapper = make(~display="flex",~flexDirection="column",());
