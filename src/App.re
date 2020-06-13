@@ -31,6 +31,8 @@ let make = () => {
         | ["styling"] => <StyledComponent/>
         | ["refs"] => <RefsComponent/>
         | ["events"] => <EventComponent/>
+        | ["json"] => <JsonComponent/>
+        | ["rest-api"] => <RestApi/>
         |_ => <Introduction/>
    };
        }

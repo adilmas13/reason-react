@@ -24,6 +24,8 @@ let make = () => {
         | ["styling"] => updateTitle("StyledComponent")
         | ["refs"] => updateTitle("RefsComponent")
         | ["events"] => updateTitle("EventComponent")
+        | ["json"] => updateTitle("JsonComponent")
+        | ["rest-api"] => updateTitle("RestApi")
         |_ => updateTitle("Home")
             }
         });

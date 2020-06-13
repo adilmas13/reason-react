@@ -63,13 +63,23 @@ let make = () => {
          id:"events",
         title:"Events",
         href : "/events"
+    },
+    {
+        id:"json",
+        title:"Json",
+        href : "/json"
+    },
+    {
+        id:"rest-api",
+        title:"Rest Api Call",
+        href : "/rest-api"
     }
     |]
 
     let (selectedLink, setSelectedLink) = React.useState(() => "introduction");
     
     let parentStyle = make(~display="flex",~flexDirection="column", ~width="300px", ~backgroundColor="#db4d3f",());
-    let linkWrapper = make(~display="flex",~flexDirection="column",());
+    let linkWrapper = make(~display="flex",~flexDirection="column", ~overflow="scroll", ());
     let navItemStyle = make(~color="#fff", ~fontWeight="500", ~cursor= "pointer", ~height = "50px", ~display="flex", ~alignItems =  "center",~paddingLeft="20px" , ~transition="0.3s ease-in-out",());
     
     let selectedLinkStyle = make(~backgroundColor="rgba(255,255,255,0.2)", ~borderTopRightRadius = "50px",  ~borderBottomRightRadius = "50px", ~paddingLeft="30px", ());
