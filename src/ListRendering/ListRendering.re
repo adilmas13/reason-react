@@ -6,7 +6,7 @@ let make = () => {
 
     <div>
     {
-        Belt.Array.map(list, item => <div>{string(item)}</div>) -> React.array
+        Belt.Array.map(list, item => <div key={item}>{string(item)}</div>) -> React.array
     }
     
     </div>
