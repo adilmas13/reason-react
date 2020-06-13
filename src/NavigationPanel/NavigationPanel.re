@@ -4,7 +4,8 @@ type navigation = {id:string,title:string, href:string};
 [@react.component]
 let make = () => {
 
-        let links = [|{
+        let links = [|
+    {
         id:"introduction",
         title:"Introduction",
         href : "/"
@@ -78,9 +79,9 @@ let make = () => {
 
     let (selectedLink, setSelectedLink) = React.useState(() => "introduction");
     
-    let parentStyle = make(~display="flex",~flexDirection="column", ~width="300px", ~backgroundColor="#db4d3f",());
+    let parentStyle = make(~display="flex",~flexDirection="column", ~width="300px", ~backgroundColor="#db4d3f",~padding="5px 0", ());
     let linkWrapper = make(~display="flex",~flexDirection="column", ~overflow="scroll", ());
-    let navItemStyle = make(~color="#fff", ~fontWeight="500", ~cursor= "pointer", ~height = "50px", ~display="flex", ~alignItems =  "center",~paddingLeft="20px" , ~transition="0.3s ease-in-out",());
+    let navItemStyle = make(~color="#fff", ~fontWeight="500", ~cursor= "pointer", ~minHeight = "50px", ~display="flex", ~alignItems =  "center",~paddingLeft="20px" , ~transition="0.3s ease-in-out",());
     
     let selectedLinkStyle = make(~backgroundColor="rgba(255,255,255,0.2)", ~borderTopRightRadius = "50px",  ~borderBottomRightRadius = "50px", ~paddingLeft="30px", ());
     
