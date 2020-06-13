@@ -1,8 +1,8 @@
 'use strict';
 
 var React = require("react");
-var ReasonReactRouter = require("reason-react/lib/js/src/ReasonReactRouter.bs.js");
-var ReasonReactErrorBoundary = require("reason-react/lib/js/src/ReasonReactErrorBoundary.bs.js");
+var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.bs.js");
+var ReasonReactErrorBoundary = require("reason-react/src/ReasonReactErrorBoundary.bs.js");
 var Header$ReasonReactExamples = require("./Header/Header.bs.js");
 var RestApi$ReasonReactExamples = require("./RestApi/RestApi.bs.js");
 var ReactState$ReasonReactExamples = require("./ReactState/ReactState.bs.js");

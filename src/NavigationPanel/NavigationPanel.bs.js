@@ -3,7 +3,7 @@
 var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
 var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
-var ReasonReactRouter = require("reason-react/lib/js/src/ReasonReactRouter.bs.js");
+var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.bs.js");
 var NavLogo$ReasonReactExamples = require("./NavLogo.bs.js");
 
 function NavigationPanel(Props) {
