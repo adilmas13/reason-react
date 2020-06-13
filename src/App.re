@@ -26,6 +26,7 @@ let make = () => {
         | ["state"] => <ReactState/>
         | ["effect"] => <ReactEffects/>
         | ["fragment"] => <ReactFragment/>
+        | ["conditional-rendering"] => <ConditionalRenderingComponents/>
         | ["styling"] => <StyledComponent/>
         | ["refs"] => <RefsComponent/>
         | ["events"] => <EventComponent/>

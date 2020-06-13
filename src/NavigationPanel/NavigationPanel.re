@@ -40,6 +40,11 @@ let make = () => {
         href : "/fragment"
     },
     {
+         id:"conditional-rendering",
+        title:"Conditional Rendering Component",
+        href : "/conditional-rendering"
+    },
+    {
          id:"stying",
         title:"Styling CSS",
         href : "/styling"

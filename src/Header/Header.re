@@ -19,6 +19,7 @@ let make = () => {
         | ["state"] => updateTitle("ReactState")
         | ["effect"] => updateTitle("ReactEffects")
         | ["fragment"] => updateTitle("ReactFragment")
+        | ["conditional-rendering"] => updateTitle("ConditionalRenderingComponents")
         | ["styling"] => updateTitle("StyledComponent")
         | ["refs"] => updateTitle("RefsComponent")
         | ["events"] => updateTitle("EventComponent")
