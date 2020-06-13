@@ -5,12 +5,12 @@ type navigation = {id:string,title:string, href:string};
 let make = () => {
 
         let links = [|{
-            id:"home",
+        id:"home",
         title:"Home",
         href : "/"
     },
     {
-         id:"simple-component",
+        id:"simple-component",
         title:"Simple Component",
         href : "/simple-component"
     },
@@ -18,6 +18,11 @@ let make = () => {
          id:"simple-component-with-props",
         title:"Simple Component With Props",
         href : "/simple-component-with-props"
+    },
+    {
+         id:"component-with-children",
+        title:"Component With Children",
+        href : "/component-with-children"
     },
     {
          id:"stying",

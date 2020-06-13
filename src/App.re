@@ -24,6 +24,7 @@ let make = () => {
         | [] => <Home name="welcome"/>
         | ["simple-component"] => <SimpleComponent/>
         | ["simple-component-with-props"] => <SimpleComponentWithProps/>
+        | ["component-with-children"] => <ComponentWithChildren/>
         | ["styling"] => <StyledComponent/>
         | ["refs"] => <RefsComponent/>
         | ["events"] => <EventComponent/>
