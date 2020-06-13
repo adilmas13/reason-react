@@ -25,6 +25,7 @@ let make = () => {
         | ["component-with-children"] => <ComponentWithChildren/>
         | ["state"] => <ReactState/>
         | ["effect"] => <ReactEffects/>
+        | ["fragment"] => <ReactFragment/>
         | ["styling"] => <StyledComponent/>
         | ["refs"] => <RefsComponent/>
         | ["events"] => <EventComponent/>

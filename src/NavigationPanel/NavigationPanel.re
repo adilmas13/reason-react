@@ -35,6 +35,11 @@ let make = () => {
         href : "/effect"
     },
     {
+         id:"fragment",
+        title:"React Fragment",
+        href : "/fragment"
+    },
+    {
          id:"stying",
         title:"Styling CSS",
         href : "/styling"

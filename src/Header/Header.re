@@ -18,6 +18,7 @@ let make = () => {
         | ["component-with-children"] => updateTitle("ComponentWithChildren")
         | ["state"] => updateTitle("ReactState")
         | ["effect"] => updateTitle("ReactEffects")
+        | ["fragment"] => updateTitle("ReactFragment")
         | ["styling"] => updateTitle("StyledComponent")
         | ["refs"] => updateTitle("RefsComponent")
         | ["events"] => updateTitle("EventComponent")
