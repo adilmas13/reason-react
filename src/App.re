@@ -30,6 +30,7 @@ let make = () => {
        {
          switch (url.path) {
         | [] => <Home name="welcome"/>
+        | ["simple-component"] => <SimpleComponent/>
         | ["styling"] => <StyledComponent/>
         | ["refs"] => <RefsComponent/>
         | ["events"] => <EventComponent/>

@@ -12,8 +12,9 @@ let make = () => {
     useEffect0(() => {
        let token = ReasonReactRouter.watchUrl(url => {
             switch(url.path){
-                 | [] => updateTitle("Home")
-        | ["users"] => updateTitle("Users")
+        | [] => updateTitle("Home")
+        | ["simple-component"] => updateTitle("SimpleComponent")
+        | ["styling"] => updateTitle("StyledComponent")
         | ["refs"] => updateTitle("RefsComponent")
         | ["events"] => updateTitle("EventComponent")
         |_ => updateTitle("Home")

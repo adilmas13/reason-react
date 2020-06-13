@@ -10,6 +10,11 @@ let make = () => {
         href : "/"
     },
     {
+         id:"simple-component",
+        title:"Simple Component",
+        href : "/simple-component"
+    },
+    {
          id:"stying",
         title:"Styling CSS",
         href : "/styling"
