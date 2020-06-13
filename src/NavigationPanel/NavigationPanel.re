@@ -45,6 +45,11 @@ let make = () => {
         href : "/conditional-rendering"
     },
     {
+         id:"list-rendering",
+        title:"List Rendering",
+        href : "/list-rendering"
+    },
+    {
          id:"stying",
         title:"Styling CSS",
         href : "/styling"

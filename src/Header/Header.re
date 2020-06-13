@@ -20,6 +20,7 @@ let make = () => {
         | ["effect"] => updateTitle("ReactEffects")
         | ["fragment"] => updateTitle("ReactFragment")
         | ["conditional-rendering"] => updateTitle("ConditionalRenderingComponents")
+        | ["list-rendering"] => updateTitle("ListRendering")
         | ["styling"] => updateTitle("StyledComponent")
         | ["refs"] => updateTitle("RefsComponent")
         | ["events"] => updateTitle("EventComponent")
