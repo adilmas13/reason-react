@@ -7,10 +7,10 @@ type routing = |Home|Users|Help;
 let make = () => {
 
   // make function is part of ReactDOMRe.Style module which is opened on top
-  let parentWrapperHeight = make(~height="100vh", ~display="flex",~flexDirection="column", ());
+  let parentStyle = make(~height="100vh", ~display="flex", ());
 
   // make function is part of ReactDOMRe.Style module which is opened on top
-  let bodyStyle = make(~flex="1", ());
+  let bodyStyle = make(~flex="1", ~padding="20px",~boxSizing="border-box",());
 
   // gets the route url
   let url = ReasonReactRouter.useUrl();
@@ -39,10 +39,10 @@ let make = () => {
 
   //  render
   <ReasonReactErrorBoundary fallback={_ => "An error occured"->React.string}>
-    <div style=(parentWrapperHeight)>
-    <Header/>
+    <div style=(parentStyle)>
+
+<NavigationPanel/>
     {body()}
-  <Footer/>
   </div>
   </ReasonReactErrorBoundary>
 
