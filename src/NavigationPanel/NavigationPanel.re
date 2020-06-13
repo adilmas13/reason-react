@@ -26,8 +26,13 @@ let make = () => {
     },
      {
          id:"state",
-        title:"React State",
+        title:"React UseState",
         href : "/state"
+    },
+     {
+         id:"effect",
+        title:"React UseEffect",
+        href : "/effect"
     },
     {
          id:"stying",

@@ -1,7 +1,5 @@
-open ReasonReact;
 open ReactDOMRe.Style;
 
-type routing = |Home|Users|Help;
 
 [@react.component]
 let make = () => {
@@ -26,6 +24,7 @@ let make = () => {
         | ["simple-component-with-props"] => <SimpleComponentWithProps/>
         | ["component-with-children"] => <ComponentWithChildren/>
         | ["state"] => <ReactState/>
+        | ["effect"] => <ReactEffects/>
         | ["styling"] => <StyledComponent/>
         | ["refs"] => <RefsComponent/>
         | ["events"] => <EventComponent/>
