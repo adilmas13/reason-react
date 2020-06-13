@@ -15,6 +15,7 @@ let make = () => {
          <button onClick=changeCurrentComponent(_, ANIMAL)>{string("Animals")}</button>
           <button onClick=changeCurrentComponent(_, PlACES)>{string("Places")}</button>
           <br/>
+          <br/>
       {
           switch (currentComponent) {
           | ANIMAL => <AnimalsComponent/>
