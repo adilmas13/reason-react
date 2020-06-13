@@ -1,6 +1,6 @@
 open ReactDOMRe.Style;
 open React;
-open ReasonReact;
+
 type navigation = {title:string, href:string};
 
 [@react.component]
