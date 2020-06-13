@@ -14,6 +14,7 @@ let make = () => {
             switch(url.path){
         | [] => updateTitle("Home")
         | ["simple-component"] => updateTitle("SimpleComponent")
+        | ["simple-component-with-props"] => updateTitle("SimpleComponentWithProps")
         | ["styling"] => updateTitle("StyledComponent")
         | ["refs"] => updateTitle("RefsComponent")
         | ["events"] => updateTitle("EventComponent")

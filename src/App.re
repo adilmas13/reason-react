@@ -17,20 +17,13 @@ let make = () => {
   // gets the route url
   let url = ReasonReactRouter.useUrl();
 
-  React.useEffect0(() => {
-   let token = ReasonReactRouter.watchUrl(url => {
-     Js.log("Listening ...");
-     Js.log(url);
-   })
-    Some(() =>  ReasonReactRouter.unwatchUrl(token));
-  });
-
   let body = () => {
        <div style=(bodyStyle)>
        {
          switch (url.path) {
         | [] => <Home name="welcome"/>
         | ["simple-component"] => <SimpleComponent/>
+        | ["simple-component-with-props"] => <SimpleComponentWithProps/>
         | ["styling"] => <StyledComponent/>
         | ["refs"] => <RefsComponent/>
         | ["events"] => <EventComponent/>

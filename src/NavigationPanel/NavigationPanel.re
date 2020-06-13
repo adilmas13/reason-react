@@ -15,6 +15,11 @@ let make = () => {
         href : "/simple-component"
     },
     {
+         id:"simple-component-with-props",
+        title:"Simple Component With Props",
+        href : "/simple-component-with-props"
+    },
+    {
          id:"stying",
         title:"Styling CSS",
         href : "/styling"
