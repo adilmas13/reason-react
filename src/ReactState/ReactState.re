@@ -30,8 +30,9 @@ let make = () => {
 
     <br/>
     <br/>
-    
+
     <div>{string("-------- Conditional State Change using same function -----")}</div>
+    <br/>
     <button onClick=conditionalUpdate(_,true)> {string("Increment Counter 3")} </button>
     <button onClick=conditionalUpdate(_,false)> {string("Decrement Counter 3")} </button>
     <div> {string("Counter 3 => " ++ string_of_int(counter3))} </div>
