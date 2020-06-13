@@ -24,6 +24,11 @@ let make = () => {
         title:"Component With Children",
         href : "/component-with-children"
     },
+     {
+         id:"state",
+        title:"React State",
+        href : "/state"
+    },
     {
          id:"stying",
         title:"Styling CSS",

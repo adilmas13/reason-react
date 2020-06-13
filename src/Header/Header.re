@@ -16,6 +16,7 @@ let make = () => {
         | ["simple-component"] => updateTitle("SimpleComponent")
         | ["simple-component-with-props"] => updateTitle("SimpleComponentWithProps")
         | ["component-with-children"] => updateTitle("ComponentWithChildren")
+        | ["state"] => updateTitle("ReactState")
         | ["styling"] => updateTitle("StyledComponent")
         | ["refs"] => updateTitle("RefsComponent")
         | ["events"] => updateTitle("EventComponent")
