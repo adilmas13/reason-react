@@ -1,5 +1,17 @@
 open ReactDOMRe.Style;
 
+module ErrorHandler = {
+  [@react.component]
+  let make = (~error, ~info) => {
+    React.useEffect2(() => {
+        Js.log("Error")
+     // you can use this function to send errors
+      None
+    }, (error, info));
+    "An error occured"->React.string
+  }
+};
+
 
 [@react.component]
 let make = () => {
@@ -31,6 +43,7 @@ let make = () => {
         | ["styling"] => <StyledComponent/>
         | ["refs"] => <RefsComponent/>
         | ["events"] => <EventComponent/>
+        | ["error-boundry"] => <ErrorBoundry/>
         | ["json"] => <JsonComponent/>
         | ["rest-api"] => <RestApi/>
         |_ => <Introduction/>
@@ -39,9 +52,7 @@ let make = () => {
        </div>
   };
 
-  //  render
-  <ReasonReactErrorBoundary fallback={_ => "An error occured"->React.string}>
-
+ <ReasonReactErrorBoundary fallback={({error, info}) => <ErrorHandler error info />} >
     <div style=(parentStyle)>
 
     <NavigationPanel/>
@@ -50,8 +61,6 @@ let make = () => {
           {body()}
         </div>
     </div>
-  
-  
-  </ReasonReactErrorBoundary>
 
+  </ReasonReactErrorBoundary>
 };

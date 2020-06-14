@@ -5,14 +5,14 @@ type navigation = {title:string, href:string};
 
 [@react.component]
 let make = () => {
-    let (title,setTitle)=useState(() => "Home")
+    let (title,setTitle)=useState(() => "Introduction")
 
     let updateTitle = (newTitle:string) => setTitle(_ => newTitle);
 
     useEffect0(() => {
        let token = ReasonReactRouter.watchUrl(url => {
             switch(url.path){
-        | [] => updateTitle("Home")
+        | [] => updateTitle("Introduction")
         | ["simple-component"] => updateTitle("SimpleComponent")
         | ["simple-component-with-props"] => updateTitle("SimpleComponentWithProps")
         | ["component-with-children"] => updateTitle("ComponentWithChildren")
@@ -24,6 +24,7 @@ let make = () => {
         | ["styling"] => updateTitle("StyledComponent")
         | ["refs"] => updateTitle("RefsComponent")
         | ["events"] => updateTitle("EventComponent")
+        | ["error-boundry"] => updateTitle("ErrorBoundry")
         | ["json"] => updateTitle("JsonComponent")
         | ["rest-api"] => updateTitle("RestApi")
         |_ => updateTitle("Home")

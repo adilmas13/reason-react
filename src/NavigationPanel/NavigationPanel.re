@@ -66,6 +66,11 @@ let make = () => {
         href : "/events"
     },
     {
+         id:"error-boundry",
+        title:"Error Boundry",
+        href : "/error-boundry"
+    },
+    {
         id:"json",
         title:"Json",
         href : "/json"
