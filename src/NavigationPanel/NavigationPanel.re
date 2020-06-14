@@ -6,83 +6,83 @@ let make = () => {
 
         let links = [|
     {
-        id:"introduction",
+        id:"/introduction",
         title:"Introduction",
         href : "/#/introduction"
     },
     {
-        id:"simple-component",
+        id:"/simple-component",
         title:"Simple Component",
         href : "/#/simple-component"
     },
     {
-         id:"simple-component-with-props",
+         id:"/simple-component-with-props",
         title:"Simple Component With Props",
         href : "/#/simple-component-with-props"
     },
     {
-         id:"component-with-children",
+         id:"/component-with-children",
         title:"Component With Children",
         href : "/#/component-with-children"
     },
      {
-         id:"state",
+         id:"/state",
         title:"React UseState",
         href : "/#/state"
     },
      {
-         id:"effect",
+         id:"/effect",
         title:"React UseEffect",
         href : "/#/effect"
     },
     {
-         id:"fragment",
+         id:"/fragment",
         title:"React Fragment",
         href : "/#/fragment"
     },
     {
-         id:"conditional-rendering",
+         id:"/conditional-rendering",
         title:"Conditional Rendering Component",
         href : "/#/conditional-rendering"
     },
     {
-         id:"list-rendering",
+         id:"/list-rendering",
         title:"List Rendering",
         href : "/#/list-rendering"
     },
     {
-         id:"stying",
+         id:"/styling",
         title:"Styling CSS",
         href : "/#/styling"
     },
      {
-        id:"refs",
+        id:"/refs",
         title:"Refs In React",
         href : "/#/refs"
     },
     {
-         id:"events",
+         id:"/events",
         title:"Events",
         href : "/#/events"
     },
     {
-         id:"error-boundry",
+         id:"/error-boundry",
         title:"Error Boundry",
         href : "/#/error-boundry"
     },
     {
-        id:"json",
+        id:"/json",
         title:"Json",
         href : "/#/json"
     },
     {
-        id:"rest-api",
+        id:"/rest-api",
         title:"Rest Api Call",
         href : "/#/rest-api"
     }
     |]
 
-    let (selectedLink, setSelectedLink) = React.useState(() => "introduction");
+
     
     let parentStyle = make(~display="flex",~flexDirection="column", ~width="300px", ~backgroundColor="#db4d3f",~padding="5px 0", ());
     let linkWrapper = make(~display="flex",~flexDirection="column", ~overflow="scroll", ());
@@ -90,9 +90,10 @@ let make = () => {
     
     let selectedLinkStyle = make(~backgroundColor="rgba(255,255,255,0.2)", ~borderTopRightRadius = "50px",  ~borderBottomRightRadius = "50px", ~paddingLeft="30px", ());
     
+    let (selectedLink, setSelectedLink) = React.useState(() => "");
+
     let redirect = (_,navigation: navigation) => {
-        ReasonReactRouter.push(navigation.href);
-        setSelectedLink(_ => navigation.id);
+       ReasonReactRouter.push(navigation.href);
         ();
     };
 
@@ -102,6 +103,21 @@ let make = () => {
             | false  => navItemStyle
         }
     };
+
+    let tempUrl = ReasonReactRouter.useUrl().hash;
+
+    React.useEffect0(() => {
+        
+       let token = ReasonReactRouter.watchUrl(url => {
+            setSelectedLink(_ => url.hash);
+        });
+        let temp = switch (tempUrl) {
+    | "" => "/introduction";
+    | _ =>  tempUrl
+    };
+       setSelectedLink(_ => temp);
+        Some(()=> ReasonReactRouter.unwatchUrl(token));
+    });
 
     <div style=(parentStyle)>
     <NavLogo/>
