@@ -1,2 +1,2 @@
 # reason-react
-The reason react deployment page
+This branch is exclusively for deployment to its github page.
