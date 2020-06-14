@@ -1,7 +1,9 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/Index.bs.js',
+  entry: './lib/js/src/Index.bs.js',
   // If you ever want to use webpack during development, change 'production'
   // to 'development' as per webpack documentation. Again, you don't have to
   // use webpack or any other bundler during development! Recheck README if
@@ -11,4 +13,15 @@ module.exports = {
     path: path.join(__dirname, "build"),
     filename: 'index.js',
   },
+  plugins:[
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'indexProduction.html'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'assets', to: 'assets' }
+      ],
+    })
+  ],
 };
