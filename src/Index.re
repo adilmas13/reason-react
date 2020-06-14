@@ -1,2 +1,2 @@
 // Entry point
-ReactDOMRe.renderToElementWithId(<App/>, "root");
+ReactDOMRe.renderToElementWithId(<App />, "root");

@@ -1,9 +1,10 @@
 [@react.component]
 let make = (~name, ~age) => {
-
+  <div>
     <div>
-    <div>{ReasonReact.string("Inside Child component (ComponentWithProps)")}</div>
-    <div>{ReasonReact.string("Name : " ++ name)}</div>
-    <div>{ReasonReact.string("Age : " ++ age)}</div>
+      {ReasonReact.string("Inside Child component (ComponentWithProps)")}
     </div>
-}
+    <div> {ReasonReact.string("Name : " ++ name)} </div>
+    <div> {ReasonReact.string("Age : " ++ age)} </div>
+  </div>;
+};
