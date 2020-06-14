@@ -28,7 +28,6 @@ let make = () => {
   let url = ReasonReactRouter.useUrl();
 
   let body = () => {
-      Js.log(url);
        <div style=(bodyStyle)>
        {
          switch (url.hash) {
