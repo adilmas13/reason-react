@@ -2,7 +2,7 @@
 
 var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
-var ReasonReactRouter = require("reason-react/lib/js/src/ReasonReactRouter.bs.js");
+var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.bs.js");
 
 function Header(Props) {
   var match = React.useState((function () {
