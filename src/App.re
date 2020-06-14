@@ -60,6 +60,7 @@ let make = () => {
         <div style=bodyWrapperStyle>
           <Header/>
           {body()}
+          <References/>
         </div>
     </div>
 

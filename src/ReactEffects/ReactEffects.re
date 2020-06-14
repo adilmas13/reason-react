@@ -65,7 +65,7 @@ let make = () => {
 
     <br/>
     // Ignore the style part for noe
-    <div style=ReactDOMRe.Style.make(~whiteSpace="pre-wrap", ~border="1px solid black", ~display="inline-block", ~padding="0px 10px 10px",())>
+    <div style=ReactDOMRe.Style.make(~whiteSpace="pre-wrap", ~border="1px solid black", ~display="inline-block",~overflow="scroll", ~maxHeight="300px", ~padding="0px 10px 10px",())>
      <h3>{string("----- Effect Log -----")}</h3>
     {string(info)}</div>
   </div>;
