@@ -2,7 +2,7 @@
   "name": "reason-react-app",
   "version": "0.1.0",
   "scripts": {
-    "make" : "bsb -make-world",
+    "make": "bsb -make-world",
     "build": "webpack --config webpack.config.js",
     "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "bs-platform": "^7.3.2",
+    "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.2",
     "gh-pages": "^3.0.0",
     "html-webpack-plugin": "^4.3.0",

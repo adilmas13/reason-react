@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './lib/js/src/Index.bs.js',
@@ -11,7 +12,7 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.join(__dirname, "build"),
-    filename: 'index.js',
+    filename: 'index.[contenthash].js',
   },
   plugins:[
     new HtmlWebpackPlugin({
@@ -22,6 +23,9 @@ module.exports = {
       patterns: [
         { from: 'assets', to: 'assets' }
       ],
+    }),
+    new CleanWebpackPlugin({
+      verbose:true
     })
   ],
 };
