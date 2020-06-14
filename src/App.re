@@ -28,24 +28,25 @@ let make = () => {
   let url = ReasonReactRouter.useUrl();
 
   let body = () => {
+      Js.log(url);
        <div style=(bodyStyle)>
        {
-         switch (url.path) {
-        | [] => <Introduction/>
-        | ["simple-component"] => <SimpleComponent/>
-        | ["simple-component-with-props"] => <SimpleComponentWithProps/>
-        | ["component-with-children"] => <ComponentWithChildren/>
-        | ["state"] => <ReactState/>
-        | ["effect"] => <ReactEffects/>
-        | ["fragment"] => <ReactFragment/>
-        | ["conditional-rendering"] => <ConditionalRenderingComponents/>
-        | ["list-rendering"] => <ListRendering/>
-        | ["styling"] => <StyledComponent/>
-        | ["refs"] => <RefsComponent/>
-        | ["events"] => <EventComponent/>
-        | ["error-boundry"] => <ErrorBoundry/>
-        | ["json"] => <JsonComponent/>
-        | ["rest-api"] => <RestApi/>
+         switch (url.hash) {
+        | "introduction" => <Introduction/>
+        | "simple-component" => <SimpleComponent/>
+        | "simple-component-with-props" => <SimpleComponentWithProps/>
+        | "component-with-children" => <ComponentWithChildren/>
+        | "state" => <ReactState/>
+        | "effect" => <ReactEffects/>
+        | "fragment" => <ReactFragment/>
+        | "conditional-rendering" => <ConditionalRenderingComponents/>
+        | "list-rendering" => <ListRendering/>
+        | "styling" => <StyledComponent/>
+        | "refs" => <RefsComponent/>
+        | "events" => <EventComponent/>
+        | "error-boundry" => <ErrorBoundry/>
+        | "json" => <JsonComponent/>
+        | "rest-api" => <RestApi/>
         |_ => <Introduction/>
    };
        }

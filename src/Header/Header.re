@@ -11,22 +11,22 @@ let make = () => {
 
     useEffect0(() => {
        let token = ReasonReactRouter.watchUrl(url => {
-            switch(url.path){
-        | [] => updateTitle("Introduction")
-        | ["simple-component"] => updateTitle("SimpleComponent")
-        | ["simple-component-with-props"] => updateTitle("SimpleComponentWithProps")
-        | ["component-with-children"] => updateTitle("ComponentWithChildren")
-        | ["state"] => updateTitle("ReactState")
-        | ["effect"] => updateTitle("ReactEffects")
-        | ["fragment"] => updateTitle("ReactFragment")
-        | ["conditional-rendering"] => updateTitle("ConditionalRenderingComponents")
-        | ["list-rendering"] => updateTitle("ListRendering")
-        | ["styling"] => updateTitle("StyledComponent")
-        | ["refs"] => updateTitle("RefsComponent")
-        | ["events"] => updateTitle("EventComponent")
-        | ["error-boundry"] => updateTitle("ErrorBoundry")
-        | ["json"] => updateTitle("JsonComponent")
-        | ["rest-api"] => updateTitle("RestApi")
+            switch(url.hash){
+        | "introduction" => updateTitle("Introduction")
+        | "simple-component" => updateTitle("SimpleComponent")
+        | "simple-component-with-props" => updateTitle("SimpleComponentWithProps")
+        | "component-with-children" => updateTitle("ComponentWithChildren")
+        | "state" => updateTitle("ReactState")
+        | "effect" => updateTitle("ReactEffects")
+        | "fragment" => updateTitle("ReactFragment")
+        | "conditional-rendering" => updateTitle("ConditionalRenderingComponents")
+        | "list-rendering" => updateTitle("ListRendering")
+        | "styling" => updateTitle("StyledComponent")
+        | "refs" => updateTitle("RefsComponent")
+        | "events" => updateTitle("EventComponent")
+        | "error-boundry" => updateTitle("ErrorBoundry")
+        | "json" => updateTitle("JsonComponent")
+        | "rest-api" => updateTitle("RestApi")
         |_ => updateTitle("Home")
             }
         });
