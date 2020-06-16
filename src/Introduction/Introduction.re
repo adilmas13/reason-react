@@ -21,13 +21,14 @@ let make = () => {
     <p style={make(~whiteSpace="pre-line", ())}> {string(description)} </p>
     <div
       style={make(
-        ~backgroundColor="rgba(240,240,240)",
+        ~border="1px solid #ccc",
+        ~backgroundColor="#fafafa",
         ~width="fit-content",
-        ~padding="10px 10px",
-        ~borderRadius="10px",
+        ~padding="15px",
+        ~borderRadius="6px",
         (),
       )}>
-      <a href="https://github.com/adilmas13/reason-react">
+      <a target="_blank" href="https://github.com/adilmas13/reason-react">
         {string(githubLink)}
       </a>
     </div>
