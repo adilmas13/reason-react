@@ -87,8 +87,10 @@ let make = () => {
   let (selectedLink, setSelectedLink) = React.useState(() => "");
 
   let redirect = (_, navigation: navigation) => {
-    ReasonReactRouter.push("/reason-react" ++ navigation.href); // addin reason-react to help in maintaining path in github pages deployment
-    ();
+    /* mainly done for live site as is goes as a static web page on Github Pages and the routes wont be found on refresh as there is no server redirection of route*/
+    Utility.isProduction()
+      ? ReasonReactRouter.push("/reason-react" ++ navigation.href)
+      : ReasonReactRouter.push(navigation.href);
   };
 
   let finalLinkStyle = (link: navigation) => {
