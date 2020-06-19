@@ -24,6 +24,11 @@ let make = () => {
       title: "Component With Children",
       href: "/#/component-with-children",
     },
+    {
+      id: "/child-parent-communication",
+      title: "Child Parent Communication",
+      href: "/#/child-parent-communication",
+    },
     {id: "/state", title: "React UseState", href: "/#/state"},
     {id: "/effect", title: "React UseEffect", href: "/#/effect"},
     {id: "/reducers", title: "React Reducers", href: "/#/reducers"},

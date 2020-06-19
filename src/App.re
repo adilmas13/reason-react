@@ -37,6 +37,7 @@ let make = () => {
        | "/simple-component" => <SimpleComponent />
        | "/simple-component-with-props" => <SimpleComponentWithProps />
        | "/component-with-children" => <ComponentWithChildren />
+       | "/child-parent-communication" => <ParentComponent/>
        | "/state" => <ReactState />
        | "/effect" => <ReactEffects />
        | "/reducers" => <ReactReducers />

@@ -32,6 +32,10 @@ let make = () => {
             "https://reasonml.github.io/reason-react/docs/en/components#a-note-on-children",
             "https://reasonml.github.io/reason-react/docs/en/render-props",
           |])
+        | "/child-parent-communication" =>
+          updateReferences([|
+            "https://reactjs.org/tutorial/tutorial.html#function-components",
+          |])
         | "/state" =>
           updateReferences([|
             "https://reasonml.github.io/reason-react/docs/en/usestate-hook",
