@@ -23,6 +23,7 @@ let make = () => {
   let increment = _ => dispatch(INCREMENT);
   let decrement = _ => dispatch(DECREMENT);
   <>
+    <h4>{string("Changing state using React Reducer")}</h4>
     <div> {string("Count => " ++ string_of_int(state.count))} </div>
     <button onClick=increment> {string("INCREMENT")} </button>
     <button onClick=decrement> {string("DECREMENT")} </button>
