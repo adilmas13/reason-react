@@ -47,6 +47,12 @@ let make = () => {
             "https://reactjs.org/docs/hooks-effect.html",
             "https://medium.com/jalgos/hooks-in-reasonml-an-introduction-1eac6ed32314",
           |])
+        | "/reducers" =>
+          updateReferences([|
+            "https://reasonml.github.io/reason-react/docs/en/usereducer-hook",
+            "https://reactjs.org/docs/hooks-reference.html#usereducer",
+            "https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks",
+          |])
         | "/fragment" =>
           updateReferences([|
             "https://reasonml.github.io/reason-react/docs/en/jsx#fragment",

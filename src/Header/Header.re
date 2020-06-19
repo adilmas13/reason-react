@@ -23,6 +23,7 @@ let make = () => {
         | "/component-with-children" => updateTitle("ComponentWithChildren")
         | "/state" => updateTitle("ReactState")
         | "/effect" => updateTitle("ReactEffects")
+        | "/reducers" => updateTitle("ReactReducers")
         | "/fragment" => updateTitle("ReactFragment")
         | "/conditional-rendering" =>
           updateTitle("ConditionalRenderingComponents")

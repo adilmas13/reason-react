@@ -26,6 +26,7 @@ let make = () => {
     },
     {id: "/state", title: "React UseState", href: "/#/state"},
     {id: "/effect", title: "React UseEffect", href: "/#/effect"},
+    {id: "/reducers", title: "React Reducers", href: "/#/reducers"},
     {id: "/fragment", title: "React Fragment", href: "/#/fragment"},
     {
       id: "/conditional-rendering",

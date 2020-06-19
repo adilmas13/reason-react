@@ -39,6 +39,7 @@ let make = () => {
        | "/component-with-children" => <ComponentWithChildren />
        | "/state" => <ReactState />
        | "/effect" => <ReactEffects />
+       | "/reducers" => <ReactReducers />
        | "/fragment" => <ReactFragment />
        | "/conditional-rendering" => <ConditionalRenderingComponents />
        | "/list-rendering" => <ListRendering />
