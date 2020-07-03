@@ -28,3 +28,5 @@ jobs:
       run : npm run make
     - name : Generating web pack build
       run : npm run build
+    - name : Deploying to github page 'adilmas13.github.io/reason-react/'
+      run : gh-pages -d build
