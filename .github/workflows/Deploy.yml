@@ -29,4 +29,4 @@ jobs:
     - name : Generating web pack build
       run : npm run build
     - name : Deploying to github page 'adilmas13.github.io/reason-react/'
-      run : gh-pages -d build
+      run : ./node_modules/gh-pages/bin/gh-pages.js -d build
