@@ -29,8 +29,8 @@ jobs:
     - name : Generating web pack build
       run : npm run build
     - name : Setting github profile
-      run : git config --local user.name "Adil Shaikh"
-    - name : Setting email'
-      run : git config --local user.email "adilmas13@gmail.com"
+      run : git config --global user.name "Adil Shaikh"
+    - name : Setting email
+      run : git config --global user.email "adilmas13@gmail.com"
     - name : Deploying to github page 'adilmas13.github.io/reason-react/'
       run : ./node_modules/gh-pages/bin/gh-pages.js -d build
