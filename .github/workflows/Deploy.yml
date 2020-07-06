@@ -28,9 +28,6 @@ jobs:
       run : npm run make
     - name : Generating web pack build
       run : npm run build
-    - name : Setting github profile
-      run : git config --global user.name "adilmas13"
-    - name : Setting email
-      run : git config --global user.email "adilmas13@gmail.com"
-    - name : Deploying to github page 'adilmas13.github.io/reason-react/'
-      run : ./node_modules/gh-pages/bin/gh-pages.js -d build
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.5.7
+
