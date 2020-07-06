@@ -30,4 +30,6 @@ jobs:
       run : npm run build
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.5.7
+      with:
+        BRANCH: gh-pages
 
